@@ -58,13 +58,13 @@ class RuleNodeList extends React.Component<Props> {
       project,
     } = this.props;
 
-    const shouldUsePrompt = organization.features?.includes?.('issue-alerts-targeting');
+    const shouldUsePrompt = project.features?.includes?.('issue-alerts-targeting');
     const options = nodes
       ? nodes
           .filter(({enabled}) => enabled)
           .map(node => ({
             value: node.id,
-            label: shouldUsePrompt ? node.prompt : node.label,
+            label: shouldUsePrompt && node.prompt?.length > 0 ? node.prompt : node.label,
           }))
       : [];
 
