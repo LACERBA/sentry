@@ -303,6 +303,7 @@ const StyledButton = styled(
   border-radius: ${p => p.theme.button.borderRadius};
   padding: 0;
   text-transform: none;
+  height: 100%;
   ${getFontWeight};
   font-size: ${getFontSize};
   ${getColors};
