@@ -62,6 +62,7 @@ const ButtonGrid = styled('div')<{gap: ValidSize; merged: boolean}>`
     & > button,
     & > a {
       position: relative;
+      height: 100%;
     }
 
     /* Raised buttons show borders on both sides. Useful to create pill bars */
